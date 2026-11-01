@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions | FinTrack</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/transaction.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <a class="brand-link" href="index.html" aria-label="Personal Finance Tracker home"><img class="brand-logo" src="assets/images/logo.png.png" alt="Personal Finance Tracker"></a>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation">Menu</button>
+        <nav class="nav-links"><a href="dashboard.html">Dashboard</a><a class="active" href="transaction.html">Transactions</a><a href="budget.html">Budget</a><a href="reports.html">Reports</a><a href="profile.html">Profile</a><a href="login.html" onclick="authLogout()">Logout</a></nav>
+    </header>
+    <main class="transactions-page">
+        <div class="page-heading"><div><span class="eyebrow">Money in motion</span><h1>Transactions</h1><p>Review, filter and manage your financial activity.</p></div><div class="page-actions"><a class="btn" href="add-transaction.html">+ Add Transaction</a></div></div>
+        <section class="transaction-filter-card">
+            <div class="transaction-filters">
+                <div class="filter-group"><label for="transactionSearch">Search</label><input id="transactionSearch" type="search" placeholder="Search transactions..."></div>
+                <div class="filter-group"><label for="typeFilter">Type</label><select id="typeFilter"><option value="all">All types</option><option value="income">Income</option><option value="expense">Expense</option></select></div>
+                <div class="filter-group"><label for="categoryFilter">Category</label><select id="categoryFilter"><option value="all">All categories</option><option>Food</option><option>Transport</option><option>Shopping</option><option>Entertainment</option><option>Bills</option><option>Education</option><option>Salary</option></select></div>
+                <div class="filter-group"><label for="dateFilter">Date</label><select id="dateFilter"><option value="all">All dates</option><option value="today">Today</option><option value="week">This week</option><option value="month">This month</option></select></div>
+                <button class="btn-secondary" id="clearFilters" type="button">Clear</button>
+            </div>
+        </section>
+        <section class="transaction-summary"><article class="transaction-summary-card income"><span>Income</span><strong id="transactionIncome">₹0</strong></article><article class="transaction-summary-card expense"><span>Expenses</span><strong id="transactionExpense">₹0</strong></article><article class="transaction-summary-card"><span>Balance</span><strong id="transactionBalance">₹0</strong></article><article class="transaction-summary-card"><span>Transactions</span><strong id="transactionCount">0</strong></article></section>
+        <section class="transactions-table-card">
+            <div class="transactions-table-header"><div><span class="section-label">Ledger</span><h2>All transactions</h2></div><span class="transaction-count" id="transactionCountLabel"></span></div>
+            <div class="transactions-table-wrapper"><table class="transactions-table"><thead><tr><th>Transaction</th><th>Category</th><th>Type</th><th>Date</th><th>Amount</th><th>Actions</th></tr></thead><tbody id="transactionsTableBody"></tbody></table></div>
+            <div class="pagination" id="pagination"></div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/transaction.js"></script>
+</body>
+</html>

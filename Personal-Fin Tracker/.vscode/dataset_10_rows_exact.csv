@@ -1,0 +1,11 @@
+member_id,name,title,category,amount,transaction_date,type,description
+1,Demo User,Monthly Salary,Salary,40000.00,2026-09-01,income,September salary
+2,Demo User,Freelance Work,Freelance,3500.00,2026-09-05,income,College design project
+3,Demo User,Groceries,Food,2850.00,2026-09-03,expense,Weekly groceries
+4,Demo User,Petrol,Transport,1200.00,2026-09-04,expense,Fuel for commuting
+5,Demo User,College Fees,Education,5000.00,2026-09-06,expense,Semester payment
+6,Demo User,Online Shopping,Shopping,1800.00,2026-09-07,expense,Personal items
+7,Demo User,Electricity Bill,Bills,1450.00,2026-09-02,expense,Monthly electricity bill
+8,Demo User,Movie Night,Entertainment,850.00,2026-09-08,expense,Weekend movie and snacks
+9,Aarav Sharma,Monthly Salary,Salary,52000.00,2026-09-01,income,September salary
+10,Aarav Sharma,Lunch,Food,650.00,2026-09-03,expense,Lunch with friends

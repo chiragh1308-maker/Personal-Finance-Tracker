@@ -1,0 +1,21 @@
+member_id,name,title,category,amount,transaction_date,type,description
+1,Demo User,Monthly Salary,Salary,40000.00,2026-09-01,income,September salary
+2,Demo User,Freelance Work,Freelance,3500.00,2026-09-05,income,College design project
+3,Demo User,Groceries,Food,2850.00,2026-09-03,expense,Weekly groceries
+4,Demo User,Petrol,Transport,1200.00,2026-09-04,expense,Fuel for commuting
+5,Demo User,College Fees,Education,5000.00,2026-09-06,expense,Semester payment
+6,Demo User,Online Shopping,Shopping,1800.00,2026-09-07,expense,Personal items
+7,Demo User,Electricity Bill,Bills,1450.00,2026-09-02,expense,Monthly electricity bill
+8,Demo User,Movie Night,Entertainment,850.00,2026-09-08,expense,Weekend movie and snacks
+9,Aarav Sharma,Monthly Salary,Salary,52000.00,2026-09-01,income,September salary
+10,Aarav Sharma,Lunch,Food,650.00,2026-09-03,expense,Lunch with friends
+11,Demo User,Annual Bonus,Salary,18000.00,2025-03-12,income,Year-end performance bonus
+12,Demo User,Festival Shopping,Shopping,4200.00,2025-10-28,expense,Diwali gifts and clothes
+13,Demo User,Health Insurance,Bills,2200.00,2024-11-30,expense,Annual premium payment
+14,Demo User,Rent Deposit,Housing,9000.00,2024-02-10,expense,Apartment security deposit
+15,Demo User,App Design Project,Freelance,6200.00,2025-06-14,income,Client website redesign
+16,Demo User,Train Ticket,Transport,1800.00,2025-09-17,expense,Weekend trip booking
+17,Demo User,Holiday Gifts,Shopping,3900.00,2024-12-25,expense,Family holiday presents
+18,Aarav Sharma,Performance Bonus,Salary,15000.00,2026-01-15,income,January bonus payout
+19,Aarav Sharma,Car Maintenance,Transport,2600.00,2026-04-18,expense,Service and tyre replacement
+20,Aarav Sharma,Family Support,Bills,5000.00,2024-08-22,expense,Financial support for parents

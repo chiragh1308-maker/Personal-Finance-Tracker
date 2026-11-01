@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - FinTrack</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/dashboard.css">
+    <link rel="stylesheet" href="/CSS/responsive.css">
+</head>
+
+<body>
+    <header class="dashboard-topbar">
+        <a class="brand-link" href="index.html" aria-label="Personal Finance Tracker home">
+            <img class="brand-logo" src="assets/images/logo.png.png" alt="Personal Finance Tracker">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation">Menu</button>
+        <nav class="nav-links">
+            <a class="active" href="dashboard.html">Dashboard</a>
+            <a href="transaction.html">Transactions</a>
+            <a href="budget.html">Budget</a>
+            <a href="reports.html">Reports</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-page">
+        <div class="dashboard-container">
+            <section class="dashboard-hero">
+                <div class="dashboard-title">
+                    <span class="dashboard-kicker">Financial overview / September 2026</span>
+                    <h1>Your money, in focus.</h1>
+                    <p>Welcome back, <strong id="welcomeName">there</strong>. Here is your latest financial pulse.</p>
+                </div>
+                <div class="dashboard-actions">
+                    <button class="dashboard-button secondary" id="reportsBtn" type="button">View reports</button>
+                    <button class="dashboard-button primary add-transaction-btn" id="addTransactionBtn" type="button">+ Add transaction</button>
+                </div>
+            </section>
+
+            <section class="summary-grid" aria-label="Financial summary">
+                <article class="summary-card balance-card featured-summary">
+                    <div class="summary-card-header">
+                        <span class="summary-card-title">Current balance</span>
+                        <span class="summary-card-icon">↗</span>
+                    </div>
+                    <strong class="summary-card-value" id="totalBalance">₹25,450</strong>
+                    <span class="summary-card-change">Available across your accounts</span>
+                </article>
+                <article class="summary-card income-card">
+                    <div class="summary-card-header">
+                        <span class="summary-card-title">Total income</span>
+                        <span class="summary-card-icon">↓</span>
+                    </div>
+                    <strong class="summary-card-value" id="totalIncome">₹40,000</strong>
+                    <span class="summary-card-change">Money in this period</span>
+                </article>
+                <article class="summary-card expense-card">
+                    <div class="summary-card-header">
+                        <span class="summary-card-title">Total expenses</span>
+                        <span class="summary-card-icon">↑</span>
+                    </div>
+                    <strong class="summary-card-value" id="totalExpense">₹14,550</strong>
+                    <span class="summary-card-change">Money out this period</span>
+                </article>
+                <article class="summary-card savings-card">
+                    <div class="summary-card-header">
+                        <span class="summary-card-title">Savings rate</span>
+                        <span class="summary-card-icon">%</span>
+                    </div>
+                    <strong class="summary-card-value" id="savingsRate">63.6%</strong>
+                    <span class="summary-card-change">Your income kept this period</span>
+                </article>
+            </section>
+
+            <section class="dashboard-grid">
+                <div class="dashboard-column">
+                    <article class="dashboard-card chart-card">
+                        <div class="dashboard-card-header">
+                            <div>
+                                <span class="section-label">Cash flow</span>
+                                <h2>Income vs expenses</h2>
+                            </div>
+                            <span class="card-period">This period</span>
+                        </div>
+                        <div class="chart-container large-chart">
+                            <canvas id="incomeExpenseChart"></canvas>
+                        </div>
+                    </article>
+
+                    <article class="dashboard-card recent-card">
+                        <div class="dashboard-card-header">
+                            <div>
+                                <span class="section-label">Activity</span>
+                                <h2>Recent transactions</h2>
+                            </div>
+                            <a href="transaction.html">View all <span>↗</span></a>
+                        </div>
+                        <div class="transaction-list" id="recentTransactions">
+                            <div class="transaction-item">
+                                <div class="transaction-left">
+                                    <span class="transaction-icon">🍔</span>
+                                    <div class="transaction-info">
+                                        <div class="transaction-name">Lunch</div>
+                                        <div class="transaction-date">Today · Food</div>
+                                    </div>
+                                </div>
+                                <span class="transaction-amount expense">− ₹250</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="dashboard-column">
+                    <article class="dashboard-card health-card">
+                        <div class="dashboard-card-header">
+                            <div>
+                                <span class="section-label">Your signal</span>
+                                <h2>Financial health</h2>
+                            </div>
+                            <span class="health-dot"></span>
+                        </div>
+                        <div class="health-score">
+                            <span class="health-score-value" id="financialHealth">Good</span>
+                            <span class="health-score-label">spending balance</span>
+                        </div>
+                        <p class="health-message">A clear view of your spending helps every decision feel lighter.</p>
+                    </article>
+
+                    <article class="dashboard-card chart-card category-card">
+                        <div class="dashboard-card-header">
+                            <div>
+                                <span class="section-label">Where it goes</span>
+                                <h2>Expense mix</h2>
+                            </div>
+                        </div>
+                        <div class="chart-container category-chart">
+                            <canvas id="categoryChart"></canvas>
+                        </div>
+                    </article>
+
+                    <article class="dashboard-card quick-card">
+                        <div class="dashboard-card-header">
+                            <div>
+                                <span class="section-label">Shortcuts</span>
+                                <h2>Make a move</h2>
+                            </div>
+                        </div>
+                        <div class="quick-actions">
+                            <button class="quick-action add-transaction-btn" id="quickAdd" type="button"><span>＋</span> Add expense</button>
+                            <button class="quick-action budget-btn" id="budgetBtn" type="button"><span>◒</span> Set a budget</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/CSS/js/main.js"></script>
+    <script src="/CSS/js/auth.js"></script>
+    <script src="/CSS/js/dashboard.js"></script>
+
+</body>
+</html>

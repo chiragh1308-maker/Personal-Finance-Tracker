@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | FinTrack</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/auth.css">
+    <link rel="stylesheet" href="/CSS/responsive.css">
+</head>
+<body>
+    <header>
+        <a class="brand-link" href="index.html" aria-label="Personal Finance Tracker home"><img class="brand-logo" src="assets/images/logo.png.png" alt="Personal Finance Tracker"></a>
+        <nav class="nav-links"><a href="index.html">Home</a><a href="register.html">Get Started</a></nav>
+    </header>
+    <main class="auth-page">
+        <section class="auth-container">
+            <div class="auth-intro">
+                <img class="brand-logo" src="assets/images/logo.png.png" alt="Personal Finance Tracker">
+                <span class="eyebrow">Your money, in focus</span>
+                <h1>Welcome Back</h1>
+                <p>Sign in to continue managing your personal finances with a clearer view.</p>
+                <div class="auth-features"><div class="auth-feature"><span class="auth-feature-icon">↗</span><span>Track your financial progress</span></div><div class="auth-feature"><span class="auth-feature-icon">%</span><span>Stay on top of your budgets</span></div></div>
+            </div>
+            <div class="auth-form">
+                <h2>Login</h2>
+                <p class="auth-form-subtitle">Use your FinTrack account details below.</p>
+                <form id="loginForm" novalidate>
+                    <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+                    <div class="form-group"><label for="password">Password</label><div class="password-wrapper"><input type="password" id="password" name="password" autocomplete="current-password" required><button class="password-toggle" type="button">Show</button></div></div>
+                    <div class="auth-options"><label class="checkbox-group"><input type="checkbox" id="remember" name="remember"> Remember me</label><a href="#">Forgot password?</a></div>
+                    <button class="auth-button" type="submit">Login</button>
+                </form>
+                <p class="auth-form-subtitle">Don't have an account? <a href="register.html">Create one</a></p>
+            </div>
+        </section>
+    </main>
+    <script src="/CSS/js/main.js"></script>
+    <script src="/CSS/js/auth.js"></script>
+</body>
+</html>

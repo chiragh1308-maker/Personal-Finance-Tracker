@@ -1,0 +1,535 @@
+/* =========================================
+   PERSONAL FINANCE TRACKER - PROFILE CSS
+   ========================================= */
+
+
+/* ---------- Profile Page ---------- */
+
+.profile-page {
+    min-height: 100vh;
+    padding: 30px 5%;
+}
+
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ---------- Page Header ---------- */
+
+.profile-header {
+    margin-bottom: 25px;
+}
+
+.profile-header h1 {
+    margin-bottom: 6px;
+    font-size: 30px;
+    color: var(--text);
+}
+
+.profile-header p {
+    margin: 0;
+    color: var(--text-light);
+}
+
+
+/* ---------- Profile Layout ---------- */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 25px;
+}
+
+
+/* ---------- Profile Sidebar ---------- */
+
+.profile-sidebar {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    height: fit-content;
+}
+
+.profile-avatar-section {
+    text-align: center;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border);
+}
+
+.profile-avatar {
+    width: 95px;
+    height: 95px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #F1EBDD;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    font-weight: 700;
+    border: 4px solid var(--card);
+    box-shadow: 0 0 0 1px var(--border);
+}
+
+.profile-name {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.profile-email {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+
+/* ---------- Profile Navigation ---------- */
+
+.profile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.profile-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 12px 13px;
+    border-radius: 10px;
+    color: var(--text-light);
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.profile-nav-item:hover {
+    background: var(--background);
+    color: var(--primary);
+}
+
+.profile-nav-item.active {
+    background: #F1EBDD;
+    color: var(--primary-dark);
+}
+
+.profile-nav-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ---------- Profile Content ---------- */
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.profile-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+}
+
+.profile-card-header {
+    margin-bottom: 22px;
+}
+
+.profile-card-header h2 {
+    margin: 0 0 5px;
+    font-size: 19px;
+    color: var(--text);
+}
+
+.profile-card-header p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+
+/* ---------- Profile Form ---------- */
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.profile-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.profile-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.profile-form-group label {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.profile-form-group input,
+.profile-form-group select,
+.profile-form-group textarea {
+    width: 100%;
+}
+
+.profile-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 5px;
+}
+
+
+/* ---------- Read Only Fields ---------- */
+
+.profile-readonly {
+    background: var(--background);
+    color: var(--text-light);
+    cursor: not-allowed;
+}
+
+
+/* ---------- Password Section ---------- */
+
+.password-section {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    padding-right: 45px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.password-toggle:hover {
+    color: var(--primary);
+}
+
+
+/* ---------- Password Strength ---------- */
+
+.password-strength {
+    margin-top: 7px;
+}
+
+.password-strength-bar {
+    width: 100%;
+    height: 5px;
+    border-radius: 20px;
+    background: var(--background);
+    overflow: hidden;
+}
+
+.password-strength-fill {
+    height: 100%;
+    width: 0;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+    background: var(--expense);
+}
+
+.password-strength-fill.medium {
+    width: 60%;
+    background: #D6A75E;
+}
+
+.password-strength-fill.strong {
+    width: 100%;
+    background: var(--income);
+}
+
+.password-strength-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+
+/* ---------- Account Settings ---------- */
+
+.settings-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 17px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.settings-item:last-child {
+    border-bottom: none;
+}
+
+.settings-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.settings-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    background: var(--background);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.settings-info h3 {
+    margin: 0 0 3px;
+    font-size: 13px;
+    color: var(--text);
+}
+
+.settings-info p {
+    margin: 0;
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+
+/* ---------- Toggle Switch ---------- */
+
+.toggle {
+    position: relative;
+    width: 45px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+    background: var(--border-dark);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.toggle-slider::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 3px;
+    top: 3px;
+    border-radius: 50%;
+    background: var(--white);
+    transition: 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.toggle input:checked + .toggle-slider {
+    background: var(--primary);
+}
+
+.toggle input:checked + .toggle-slider::before {
+    transform: translateX(21px);
+}
+
+
+/* ---------- Danger Zone ---------- */
+
+.danger-zone {
+    border-color: #E8CFCF;
+}
+
+.danger-zone .profile-card-header h2 {
+    color: var(--expense);
+}
+
+.danger-zone-content {
+    padding: 16px;
+    background: var(--expense-light);
+    border: 1px solid #F0CCCC;
+    border-radius: 12px;
+}
+
+.danger-zone-content p {
+    color: var(--text-light);
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.delete-account-btn {
+    border: 1px solid #E2B4B4;
+    background: var(--white);
+    color: var(--expense);
+    padding: 10px 15px;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.delete-account-btn:hover {
+    background: var(--expense);
+    color: var(--white);
+}
+
+
+/* ---------- Profile Success / Error ---------- */
+
+.profile-message {
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.profile-message.success {
+    background: var(--income-light);
+    color: var(--income);
+    border: 1px solid #CBE5D6;
+}
+
+.profile-message.error {
+    background: var(--expense-light);
+    color: var(--expense);
+    border: 1px solid #F0CCCC;
+}
+
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-sidebar {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .profile-avatar-section {
+        border-bottom: none;
+        border-right: 1px solid var(--border);
+        padding: 0 25px 0 0;
+    }
+
+    .profile-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .profile-page {
+        padding: 20px 4%;
+    }
+
+    .profile-header h1 {
+        font-size: 24px;
+    }
+
+    .profile-sidebar {
+        display: block;
+    }
+
+    .profile-avatar-section {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 0 0 20px;
+    }
+
+    .profile-nav {
+        flex-direction: column;
+        margin-top: 18px;
+    }
+
+    .profile-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    .profile-form-actions {
+        flex-direction: column;
+    }
+
+    .profile-form-actions .btn {
+        width: 100%;
+    }
+
+    .settings-item {
+        align-items: flex-start;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+        font-size: 28px;
+    }
+
+    .profile-name {
+        font-size: 16px;
+    }
+}

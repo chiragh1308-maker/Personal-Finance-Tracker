@@ -1,0 +1,39 @@
+@media (max-width: 760px) {
+    header { flex-wrap: wrap; min-height: 68px; padding: 12px 20px; }
+    .brand-logo { max-height: 92px; width: 260px; }
+    .menu-toggle { display: inline-flex; margin-left: auto; }
+    nav.nav-links { display: none; flex-basis: 100%; flex-direction: column; align-items: stretch; gap: 3px; padding-top: 8px; }
+    nav.nav-links.active { display: flex; }
+    nav.nav-links a { border-radius: 8px; padding: 11px 12px; }
+    nav a:last-child { text-align: center; }
+    main { padding: 34px 20px; }
+    .hero { min-height: auto; }
+    .hero-visual { min-height: 260px; }
+    .hero-balance strong { font-size: 2rem; }
+    .feature-grid, .summary-grid, .budget-summary, .report-summary, .transaction-summary, .profile-grid, .profile-form { grid-template-columns: 1fr; }
+    .about-band { margin-inline: -20px; padding-inline: 20px; }
+    .page-heading, .dashboard-card-header, .budget-card-header, .report-chart-header { align-items: flex-start; flex-direction: column; }
+    .page-actions, .dashboard-actions, .transactions-actions, .budget-actions, .reports-actions, .form-actions { width: 100%; }
+    .page-actions > *, .dashboard-actions > *, .transactions-actions > *, .budget-actions > *, .reports-actions > *, .form-actions > * { flex: 1; }
+    .transaction-filters, .report-filters { grid-template-columns: 1fr; }
+    .quick-actions { grid-template-columns: 1fr; }
+    .auth-container { grid-template-columns: 1fr; }
+    .auth-intro { padding: 34px 26px; }
+    .auth-intro h1 { font-size: 2rem; }
+    .auth-form { padding: 34px 26px; }
+    .auth-options { align-items: flex-start; flex-direction: column; gap: 10px; }
+    .chart-container, .report-chart { height: 240px; }
+    .category-chart, .report-chart.small { height: 220px; }
+    .dashboard-card, .budget-card, .report-chart-card, .profile-card { padding: 19px; }
+    .transactions-table-card { margin-inline: -20px; border-radius: 0; border-inline: 0; }
+    .transactions-table-header { padding-inline: 20px; }
+}
+
+@media (max-width: 420px) {
+    h1 { font-size: 2rem; }
+    .hero-actions a, .hero-actions button { width: 100%; }
+    .hero-visual { min-height: 235px; }
+    .summary-card-value, .budget-summary-card strong, .report-summary-card strong { font-size: 1.4rem; }
+    .transaction-item { align-items: flex-start; gap: 8px; }
+    .transaction-amount { white-space: nowrap; }
+}

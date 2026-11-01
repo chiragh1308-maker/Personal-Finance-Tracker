@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Profile | FinTrack</title>
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/profile.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header><a class="brand-link" href="index.html" aria-label="Personal Finance Tracker home"><img class="brand-logo" src="assets/images/logo.png.png" alt="Personal Finance Tracker"></a><button class="menu-toggle" type="button" aria-label="Toggle navigation">Menu</button><nav class="nav-links"><a href="dashboard.html">Dashboard</a><a href="transaction.html">Transactions</a><a href="budget.html">Budget</a><a href="reports.html">Reports</a><a class="active" href="profile.html">Profile</a><a href="login.html" onclick="authLogout()">Logout</a></nav></header>
+    <main class="profile-page">
+        <div class="page-heading"><div><span class="eyebrow">Your account</span><h1>Profile</h1><p>Keep your account information current.</p></div></div>
+        <section class="profile-grid"><article class="profile-card"><div class="profile-avatar" id="profileAvatar">D</div><h2 id="profileName">Your profile</h2><p class="profile-meta" id="profileEmail">user@example.com</p><div style="margin-top:24px"><button class="btn-danger" type="button" onclick="authLogout()">Logout</button></div></article><article class="profile-card"><span class="section-label">Personal information</span><h2 style="margin:6px 0 22px">Account details</h2><form class="profile-form" id="profileForm"><div class="form-group"><label for="name">Full Name</label><input id="name" type="text" value=""></div><div class="form-group"><label for="email">Email</label><input id="email" type="email" value=""></div><div class="form-group"><label for="phone">Phone Number</label><input id="phone" type="tel" placeholder="Enter phone number"></div><div class="form-actions"><button type="submit">Save Changes</button></div></form></article></section>
+    </main>
+    <script src="js/main.js"></script><script src="js/auth.js"></script><script src="js/profile.js"></script>
+</body>
+</html>

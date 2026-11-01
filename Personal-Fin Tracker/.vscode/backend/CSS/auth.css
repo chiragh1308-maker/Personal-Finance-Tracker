@@ -1,0 +1,5 @@
+.auth-container { animation: auth-enter 420ms ease both; }
+.auth-intro { position: relative; }
+.auth-intro::after { border: 1px solid rgba(255,255,255,.16); border-radius: 50%; content: ""; height: 240px; position: absolute; right: -100px; top: 20px; width: 240px; }
+.auth-intro > * { position: relative; z-index: 1; }
+@keyframes auth-enter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
